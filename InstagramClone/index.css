@@ -3,3 +3,82 @@ html, body {
     padding: 0;
 }
 
+/* images */
+
+.logo-img{
+    width: 127px;
+    height: 33.5px;
+    margin-top: 16px;
+    margin-left: 15px;
+}
+
+.profile-img{
+    border-radius: 100%;
+    margin-left: 162.5px;
+    margin-top: 16px;
+}
+.avatar-img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.profile-img, .avatar-img{
+    width: 34px;
+    height: 34px;
+     border-radius: 100%;
+}
+.posted-img{
+    width: 375px;
+    height: 375px;
+}
+/* layouts */
+header{
+    height: 67px;
+    border-bottom: 1px solid #C6C6C6;
+}
+.container{
+    width: 375px;
+    margin: 0 auto;
+    background-color: #EDEDED;
+}
+.post{
+    height: 545px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.post p{
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-size: 13px;
+    font-style: bold;
+    margin-left: 6px;
+    color: #000000;
+}
+
+span{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+}
+.location{
+    display: block;
+}
+
+.poster-info{
+    display: flex;  
+}
+
+.like{
+    width: 23px;
+    height: 22px;
+}
+
+.share, .comment{
+    margin-left: 5px;
+    width: 22px;
+    height: 18.65px;
+}
+.caption{
+    margin-top: 15px;
+    margin-left: 10px;
+}

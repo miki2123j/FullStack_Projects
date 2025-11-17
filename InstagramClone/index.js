@@ -28,3 +28,6 @@ const posts = [
     }
 ]
 
+const posterImg = document.getElementById("poster-profile-img")
+
+posterImg.innerHTML = ``
