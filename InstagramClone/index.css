@@ -43,6 +43,7 @@ header{
 .post{
     height: 545px;
     border-bottom: 1px solid #C6C6C6;
+    background-color: #EDEDED;
 }
 
 .post p{
@@ -72,7 +73,10 @@ span{
     width: 23px;
     height: 22px;
 }
-
+.like:hover, .like:active{
+    width: 30px;
+    height: 30px;
+}
 .share, .comment{
     margin-left: 5px;
     width: 22px;
