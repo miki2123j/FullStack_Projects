@@ -74,8 +74,7 @@ span{
     height: 22px;
 }
 .like:hover, .like:active{
-    width: 30px;
-    height: 30px;
+    opacity: 0.1;
 }
 .share, .comment{
     margin-left: 5px;
