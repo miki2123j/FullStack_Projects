@@ -13,6 +13,7 @@ const mass = document.getElementById("mass")
 
 convertBtn.addEventListener("click", function(){
     render()
+    inputEl.value = ''
 })
 
 function render(){
