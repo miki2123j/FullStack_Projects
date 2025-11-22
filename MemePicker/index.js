@@ -9,10 +9,17 @@ getImageBtn.addEventListener('click', getMatchingCatsArray)
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
 function getMatchingCatsArray(){
-    const isGif = gifsOnlyOption.checked
     if(document.querySelector('input[type="radio"]:checked')){
         const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-        console.log(selectedEmotion)
+        const isGif = gifsOnlyOption.checked
+        const mathchingCatsArray = catsData.filter(function(cat){
+            if (isGif){
+                return cat.emotionTags.includes(selectedEmotion) && cat.isGif
+            } else{
+                return cat.emotionTags.includes(selectedEmotion)
+            }
+        })
+        return mathchingCatsArray
     }
 }
 
