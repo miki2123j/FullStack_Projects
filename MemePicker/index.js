@@ -7,13 +7,15 @@ const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn') 
 
-getImageBtn.addEventListener('click', renderCat)
-
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
-memeModalCloseBtn.addEventListener('click', function(){
+memeModalCloseBtn.addEventListener('click', closeModal)
+
+getImageBtn.addEventListener('click', renderCat)
+
+function closeModal(){
     memeModal.style.display = 'none'
-})
+}
 
 function getMatchingCatsArray(){
     if(document.querySelector('input[type="radio"]:checked')){
