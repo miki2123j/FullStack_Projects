@@ -23,6 +23,6 @@ function getPropertyHtml(properties = [placeholderPropertyObj]) {
                     <h3>${totalSize} m&sup2;</h3>
                 </div>
             </section>` 
-    })
+    }).join('')
 }
 document.getElementById('container').innerHTML = getPropertyHtml(propertyForSaleArr)

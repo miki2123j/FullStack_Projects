@@ -67,14 +67,8 @@ function handleTweetBtnClick(){
 function getFeedHtml(){
     let feedHtml = ``
     tweetsData.forEach(function(tweet){
-        let likeIconClass = ''
-        let retweetIconClass = ''
-        if(tweet.isLiked){
-            likeIconClass = 'liked'
-        }
-        if(tweet.isRetweeted){
-            retweetIconClass = 'retweeted'
-        }
+        let likeIconClass = tweet.isLiked ? 'liked' : ''
+        let retweetIconClass = tweet.isRetweeted ? 'retweeted' : ''
         let repliesHtml = ''
 
         if(tweet.replies.length > 0){
