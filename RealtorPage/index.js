@@ -19,7 +19,7 @@ function getPropertyHtml(properties = [placeholderPropertyObj]) {
                 <div class="card-right">
                     <h2>${propertyLocation}</h2>
                     <h3>£${priceGBP}/h3>
-                    <p>${comment}T</p>
+                    <p>${comment}</p>
                     <h3>${totalSize} m&sup2;</h3>
                 </div>
             </section>` 
