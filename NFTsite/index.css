@@ -13,16 +13,19 @@ h1, h3{
 
 h1{
     color: whitesmoke;
-    font-size: 36px;
+    font-size: 2.25em;
 }
 
 h2{
+    color: #451c7a;
+    font-size: 1.75em;
     margin-top: 0;
 }
 
-h3{
+.subheading {
+    display: block;
+    font-size: 0.56em; 
     color: #d0aaff;
-    font-size: 20px;
 }
 
 p{
@@ -86,12 +89,16 @@ header, .section-two{
 }
 
 .container{
-    width: 620px;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .main-image{
-    width:100%;
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    margin: 0 auto 32px;
 }
 
 .section-two-image-container{
@@ -100,7 +107,7 @@ header, .section-two{
 }
 
 .feature-image{
-    width: 300px;
+    width: 48.8%;
     border-radius: 4.6px;
 }
 
