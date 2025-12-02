@@ -1,6 +1,7 @@
 import {menuArray} from "./data.js"
 
 const container = document.getElementById("container")
+const orderForm = document.getElementById("order-form")
 let isClicked1 = false
 let priceArr= []
 let orderArr = []
@@ -11,8 +12,30 @@ document.addEventListener('click', function(e){
         isClicked1 = true
     } else if(e.target.dataset.remove){
         handleRemoveClick(e.target.dataset.remove)
+    } else if(e.target.id === "order-btn"){
+        handleOrderBtnClick()
     }
 })
+
+orderForm.addEventListener('submit', function(e){
+    e.preventDefault()
+    document.getElementById("modal").style.display = 'none'
+    const orderFormData = new FormData(orderForm)
+    const fullName = orderFormData.get('fullName')
+    container.innerHTML = ""
+    render()
+    container.innerHTML += `
+            <div class="thanks-msg">
+                <p>Thanks,${fullName}!Your order is on its way!</P>
+            </div>
+        `
+})
+
+function handleOrderBtnClick(){
+    document.getElementById("modal").style.display = 'inline'
+}
+
+
 function handleAddClick(itemId){
     const targetMenuObj = menuArray.filter(function(item){
         return item.id === Number(itemId)
@@ -65,7 +88,7 @@ function renderYourOrder(){
                 <p>Total Price</p>
                 <p id="total"></p>
             </div>
-            <button>Complete Order</button>
+            <button id="order-btn" class="order-btn">Complete Order</button>
     </section>`
 }
 
