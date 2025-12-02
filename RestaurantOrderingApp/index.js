@@ -1,32 +1,57 @@
 import {menuArray} from "./data.js"
 
-let isClicked1 = false
 const container = document.getElementById("container")
+let isClicked1 = false
+let priceArr= []
+let orderArr = []
 document.addEventListener('click', function(e){
     if(e.target.dataset.add){
         handleAddClick(e.target.dataset.add)
+        renderOrderList(orderArr)
         isClicked1 = true
+    } else if(e.target.dataset.remove){
+        handleRemoveClick(e.target.dataset.remove)
     }
 })
-let priceArr= []
-function handleAddClick(ItemId){
+function handleAddClick(itemId){
+    const targetMenuObj = menuArray.filter(function(item){
+        return item.id === Number(itemId)
+    })[0]
+    orderArr.push(targetMenuObj)
+    priceArr.push(targetMenuObj.price)
+}
+
+function handleRemoveClick(index){
+    if(orderArr.length === 1){
+        container.innerHTML = ""
+        render()
+        isClicked1 = false
+        orderArr = []
+        priceArr = []
+    } else{
+        orderArr.splice(index, 1)
+        priceArr.splice(index, 1)
+        renderOrderList(orderArr)
+    }
+}
+
+function renderOrderList(order){
     if(!isClicked1){
         renderYourOrder()
     }
-    const targetMenuObj = menuArray.filter(function(item){
-        return item.id === Number(ItemId)
-    })[0]
-    priceArr.push(targetMenuObj.price)
-    const totalPrice = priceArr.reduce((total, current) => total + current)
-    console.log(targetMenuObj)
-    document.getElementById("order-list").innerHTML +=`
+    let template  = ``
+    order.forEach((item, index) =>{
+        template += `
                 <div class="outter-order-list">
                 <div class="inner-order-list">
-                <p>${targetMenuObj.name}</p>
-                <p class="remove" data-remove="remove">remove</p>
-                <p>$${targetMenuObj.price}</p>
+                <p>${item.name}</p>
+                <p class="remove" data-remove="${index}">remove</p>
+                <p>$${item.price}</p>
                 </div>
                 </div>`
+    })
+    const totalPrice = priceArr.reduce((total, current) => total + current)
+    document.getElementById("order-list").innerHTML = template 
     document.getElementById("total").innerText = `$${totalPrice}`
 }
 
