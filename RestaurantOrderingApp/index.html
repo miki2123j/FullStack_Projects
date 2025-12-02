@@ -8,19 +8,17 @@
             <h2>The best burgers and pizzas in town</h2>
         </main>
         <section class="container" id="container"></section>
-        <!-- <section class="order" id="order">
-            <h2>Your order</h2>
-            <div class="order-list">
-                    <p>${name}</p>
-                    <p class="remove" data-remove="remove">remove</p>
-                    <p>$${price}</p>
+        <div class="modal" id="modal">
+            <div class="modal-inner" id="modal-inner">
+                <h2>Enter card details</h2>
+                <form id="order-form">
+                    <input type="text", name="fullName", aria-label="Full name" placeholder="Enter your full name" required>
+                    <input type="text", name="cardNumber", aria-label="Card number" placeholder="Enter card number" required>
+                    <input type="text", name="cvv", aria-label="CVV" placeholder="Enter CVV" required>
+                    <button type="submit" class="pay-btn">Pay</button>
+                </form>
             </div>
-            <div class="total">
-                <p>Total Price</p>
-                <p>${totalPrice}</p>
-            </div>
-            <button>Complete Order</button>
-        </section> -->
+        </div>
 	    <script src="index.js" type="module"></script>
     </body>
 </html>
