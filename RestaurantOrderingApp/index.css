@@ -87,7 +87,7 @@ p, h2, h1{
     cursor: pointer;
 }
 
-button{
+.order-btn{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     height: 60px;
@@ -96,4 +96,63 @@ button{
     background-color: #16DB99;
     border-radius: 3px;
     color: #FFFFFF;
+}
+
+.modal{
+    height: 472px;
+    width: 424px;
+    border: 1px solid #757575;
+    border-radius: 3.9px;
+    box-shadow: 5.19px 5.19px 255.44px 0px #00000080;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+
+.modal h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+input{
+    width: 375px;
+    height: 61px;
+    margin-top: 20px;
+    color: #757575;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 15px;
+}
+
+.pay-btn{
+    width: 375px;
+    height: 61px;
+    margin-top: 45px;
+    border: none;
+    background-color: #16DB99;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.thanks-msg{
+    width: 504px;
+    height: 120px;
+    background-color: #ECFDF5;
+    color: #065F46;
+    margin: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Smythe';
+    font-size: 25px;
 }
